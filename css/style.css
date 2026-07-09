@@ -11,7 +11,7 @@
   --shadow: rgba(0,0,0,.38);
   --vh: 1vh;
 }
-html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; overflow: hidden; background: #200; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
+html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; overflow: hidden; background: #200; color: var(--ink); font-family: "STKaiti", "KaiTi", "Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif; }
 body { touch-action: pan-y; }
 #sparkCanvas { position: fixed; inset: 0; z-index: 6; pointer-events: none; mix-blend-mode: screen; opacity: .72; }
 .h5 { height: calc(var(--vh) * 100); overflow-y: auto; overflow-x: hidden; scroll-snap-type: y mandatory; -webkit-overflow-scrolling: touch; background: #3a0303; }
@@ -28,7 +28,7 @@ body { touch-action: pan-y; }
 .seal { width: 82px; height: 82px; border-radius: 999px; margin: 0 auto 16px; display: grid; place-items: center; color: #7b0702; font-weight: 900; letter-spacing: .08em; background: radial-gradient(circle at 35% 30%, #fff9c8, #f5c05d 55%, #b36312 100%); box-shadow: inset 0 3px 6px rgba(255,255,255,.65), 0 10px 26px rgba(0,0,0,.32), 0 0 35px rgba(255,215,102,.35); }
 .eyebrow { margin: 0 0 8px; color: rgba(255,232,166,.88); font-size: 12px; letter-spacing: .22em; font-weight: 800; text-transform: uppercase; }
 .main-title { margin: 0 0 14px; font-family: "STKaiti", "KaiTi", "Songti SC", serif; font-size: clamp(66px, 19vw, 112px); line-height: .92; letter-spacing: .08em; }
-.gold-3d, .gold-title { color: transparent; background: linear-gradient(92deg, #fff8bd 0%, #ffd263 22%, #fff0a1 45%, #a85a0d 62%, #ffe99a 78%, #fff8d6 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 2px 0 #8b3c00, 0 5px 10px rgba(76,21,0,.65), 0 0 24px rgba(255,205,86,.34); animation: goldShine 3.8s linear infinite; background-size: 220% auto; }
+.gold-3d, .gold-title { color: transparent; background: linear-gradient(92deg, #fffde2 0%, #ffe98b 16%, #ffd24a 32%, #fff7b8 48%, #ffcf3d 66%, #fff0a6 82%, #fffef0 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 1px 0 #9a5100, 0 3px 0 #7f3d00, 0 8px 16px rgba(76,21,0,.55), 0 0 20px rgba(255,222,98,.52), 0 0 34px rgba(255,241,160,.28); animation: goldShine 3.6s linear infinite; background-size: 240% auto; filter: saturate(1.14) brightness(1.08); }
 @keyframes goldShine { from { background-position: 0% center; } to { background-position: 220% center; } }
 .cover-frame h2 { margin: 0 0 8px; font-size: clamp(19px, 5vw, 28px); line-height: 1.35; font-weight: 800; }
 .cover-frame h3 { margin: 0 0 18px; font-size: clamp(17px, 4.3vw, 24px); line-height: 1.35; font-weight: 700; color: #fff4d7; }
@@ -264,4 +264,23 @@ body, .h5, .page { overflow-x: hidden; }
   .page-head h2 { font-size: clamp(23px, 7.2vw, 31px); letter-spacing: .03em; }
   .letter-card, .detail-card, .warm-card { font-size: 14.5px; }
   .slide figcaption { left: 14px; right: 14px; font-size: 16px; padding: 14px 12px; }
+}
+
+
+/* 2026-07 typography patch: use KaiTi for all non-art text */
+body, p, h2, h3, button, .slogan, .tiny-note, .swipe-hint, .detail-card, .warm-card, .letter-card, .theme-sub, .slide figcaption, .photo-grid figcaption, .sign, .detail-row p, .detail-row b, .editable, .seal {
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif;
+}
+.eyebrow {
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif;
+  letter-spacing: .16em;
+}
+.cover-frame h2, .cover-frame h3, .slogan, .ending-text, .theme-sub, .detail-row p, .warm-card, .letter-card {
+  line-height: 1.9;
+}
+.start-btn, .music-btn {
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif;
+}
+.slide figcaption b {
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "Songti SC", "Noto Serif CJK SC", serif;
 }
